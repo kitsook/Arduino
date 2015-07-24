@@ -48,12 +48,13 @@ void loop() {
     
     // Tell the host computer we detected motion
     Serial.print(1);
+
+    // sleep for the PIR to reset
+    delay(5000);
     
   } else {
     // Turn the LED off
     digitalWrite(ledPin, LOW);
   }
 
-  // Sleep for awhile before polling again
-  delay(500);
 }
